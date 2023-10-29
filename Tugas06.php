@@ -3,58 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tugas 06</title>
+    <title>tugas 06</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <body>
-    <h1>Form Registrasi</h1>
-    <form action="Tugas06Pro.php" method="POST">
-        <h3>Isi data dibawah ini    :</h3>
-        <table cellpading="3">
-            <tr>
-                <td>Nama</td>
-                <td>
-                    <input type="text" name="data_nama">
-                </td>
-            </tr>
-            <tr>
-                <td>Alamat</td>
-                <td>
-                    <textarea type="text" name="data_alamat" id="data_alamat" cols="30" rows="10"></textarea>
-                </td>
-            </tr>
-            <tr>
-                <td>Tempat Lahir</td>
-                <td>
-                    <input type="text" name="data_tempat_lahir">
-                </td>
-            </tr>
-            <tr>
-                <td>Tanggal Lahir</td>
-                <td>
-                    <input type="text" name="data_tanggal_lahir">
-                </td>
-            </tr>
-            <tr>
-                <td>Jenis Kelamin</td>
-                <td>
-                    <input type="radio" name="data_jk" id="data_jk" value="Laki-laki">Laki-laki
-                    <input type="radio" name="data_jk" id="data_jk" value="Perempuan">Perempuan
-                </td>
-            </tr>
-            <tr>
-                <td>Pendidikan</td>
-                <td>
-                    <select name="data_pendidikan" id="data_pendidikan">
-                        <option value="S1">S1</option>
-                        <option value="SMA">SMA</option>
-                        <option value="SMP">SMP</option>
-                        <option value="SD">SD</option>
-                    </select>
-                </td>
-            </tr>
-        </table>
-        <button type="submit">Submit</button>
-        <button type="reset">Cancel</button>
-</form>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+            <h1>Form Registrasi</h1>
+            <form action="Tugas06Pro.php" method="POST" >
+                <div class="mb-3">
+                <label for="nama" class="form-label">Nama</label>
+                    <input type="text" class="form-control" name="nama" id="nama" placeholder="Nama Anda" require>
+                </div>
+                <div class="mb-3">
+                    <label for="alamat" class="form-label">Alamat</label>
+                    <textarea type="text" class="form-control" name="alamat" id="alamat" row="3"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="tmptlahir" class="form-label">Tempat Lahir</label>
+                    <input type="text" class="form-control" name="tmptlahir" id="tmptlahir" placeholder="Tempat Lahir Anda" require>
+                </div>
+                <div class="mb-3">
+                    <label for="tnggllahir" class="form-label">Tanggal Lahir</label>
+                    <input type="text" class="form-control" name="tnggllahir" id="tnggllahir" placeholder="Tanggal Lahir Anda" require>
+                </div>
+                <div class="mb-3">
+                    <label class="radio-inline">Laki-Laki</label>
+                    <input type="radio" name="jk" id="jk" value="Laki-Laki" require data-fv-notempty-message="Tidak Boleh Kosong">
+                    <label class="radio-inline">Perempuan</label>
+                    <input type="radio" name="jk" id="jk" value="Perempuan" require data-fv-notempty-message="Tidak Boleh Kosong">
+                </div>
+                <select class="form-select" aria-label="Default select example" name="pendidikan">
+                    <option selected>Pilih</option>
+                    <option value="S1">S1</option>
+                    <option value="SMK">SMK</option>
+                    <option value="SMP">SMP</option>
+                    <option value="SD">SD</option>
+                </select><br>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="reset" class="btn btn-default">Cancel</button>
+
+    </div>
+        </div>
+            </div>
+            </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
